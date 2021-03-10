@@ -5,10 +5,14 @@
  */
 package com.test.archivosnio;
 
+import java.io.IOException;
+import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.SimpleFileVisitor;
 import java.nio.file.StandardOpenOption;
+import java.nio.file.attribute.BasicFileAttributes;
 import java.util.List;
 
 import java.util.Scanner;
@@ -80,6 +84,29 @@ public class OperacionesArchivo {
                 System.out.println(linea);
             }
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void eliminarDirectorio() {
+        Path path = Paths.get("C:\\Users\\Usuario\\Documents\\ArchivoElim");
+        try {
+            Files.walkFileTree(path, new SimpleFileVisitor<Path>() {
+                @Override
+                public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+                    System.out.println("Archivo a eliminar: " + file.toString());
+                    Files.delete(file);
+                    return FileVisitResult.CONTINUE;
+                }
+
+                @Override
+                public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
+                    Files.delete(dir);
+                    System.out.println("Directorio a eliminar: " + dir.toString());
+                    return FileVisitResult.CONTINUE;
+                }
+            });
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
