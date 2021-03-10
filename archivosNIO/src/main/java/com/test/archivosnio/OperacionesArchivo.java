@@ -22,6 +22,8 @@ import java.util.Scanner;
  */
 public class OperacionesArchivo {
 
+    
+    
     public void crearDirectorio() {
         Path path = Paths.get("E:\\programacionIII");
         try {

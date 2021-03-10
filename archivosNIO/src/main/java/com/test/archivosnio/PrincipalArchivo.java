@@ -25,7 +25,8 @@ public class PrincipalArchivo {
             System.out.println("3. Adicionar contenido");
             System.out.println("4. Mostrar Contenido");
             System.out.println("5. Mostrar Contenido");
-            System.out.println("6. Salir");
+            System.out.println("6. Mostrar Contenido");
+            System.out.println("7. Salir");
             System.out.println("Digite una opcion");
             opc = leer.nextInt();
             switch (opc) {
