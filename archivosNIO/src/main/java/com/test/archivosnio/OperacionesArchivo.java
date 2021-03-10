@@ -82,6 +82,33 @@ public class OperacionesArchivo {
         }
     }
     
+    
+    //****
+    
+    public void dropFile(){
+        
+       
+        
+        Path path = Paths.get("E:\\programacionIII\\miArchivo.txt");
+        
+        try {
+            //true if the file was deleted by this method; false if the file could not be deleted because it did not exist
+            if (Files.exists(path)) {
+                Files.delete(path);
+                System.out.println("Se elimino el archivo correctamente");
+                
+            } else {
+                System.out.println("El archivo no existe");
+            
+            }
+            
+            
+            //System.out.println( (Files.deleteIfExists(path))?"The file was DELETE SUCcessfully":"the file was not DELETE");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+    }
 
    
 

@@ -24,7 +24,8 @@ public class PrincipalArchivo {
             System.out.println("2. Crear Archivo");
             System.out.println("3. Adicionar contenido");
             System.out.println("4. Mostrar Contenido");
-            System.out.println("5. Salir");
+            System.out.println("5. Eliminar Archivo");
+            System.out.println("6. Salir");
             System.out.println("Digite una opcion");
             opc = leer.nextInt();
             switch (opc) {
@@ -40,6 +41,11 @@ public class PrincipalArchivo {
                 case 4:
                     obj.mostrarContenido();
                     break;
+                      
+                case 5:
+                    obj.dropFile();
+                    break;
+               
                 default:
                     continuar = false;
                     break;
