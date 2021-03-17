@@ -86,9 +86,7 @@ public class OperacionesArchivo {
     //****
     
     public void dropFile(){
-        
-       
-        
+
         Path path = Paths.get("E:\\programacionIII\\miArchivo.txt");
         
         try {
@@ -100,9 +98,7 @@ public class OperacionesArchivo {
             } else {
                 System.out.println("El archivo no existe");
             
-            }
-            
-            
+            }     
             //System.out.println( (Files.deleteIfExists(path))?"The file was DELETE SUCcessfully":"the file was not DELETE");
         } catch (Exception e) {
             e.printStackTrace();
