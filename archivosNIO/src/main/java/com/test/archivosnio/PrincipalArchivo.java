@@ -1,3 +1,4 @@
+//<<<<<<< HEAD
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -19,6 +20,7 @@ public class PrincipalArchivo {
         boolean continuar = true;
         int opc = 0;
         do {
+            
             System.out.println("MENU DE OPCIONES");
             System.out.println("1. Crear Directorio");
             System.out.println("2. Crear Archivo");
